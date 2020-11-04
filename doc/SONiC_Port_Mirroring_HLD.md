@@ -308,16 +308,16 @@ SONiC Yang model  and OpenConfig extension models will be introduced for this fe
 Existing mirror session commands are enhanced to support this feature.
 ```
     # Modify existing ERSPAN configuration as below.
-    config mirror_session add erspan <session-name> <src_ip> <dst_ip> <gre> <dscp>  [ttl] [queue] --policer <policer>
+    config mirror_session add erspan <session-name> <src_ip> <dst_ip> <dscp> <ttl> [gre_type] [queue] --policer <policer>
 
     #Configure Destination only span mirror session.
     config mirror_session add span <session-name> <destination_ifName>
 
     # Modify existing ERSPAN configuration to accept source port and direction
-    config mirror_session add erspan <session-name> <src_ip> <dst_ip> <gre> <dscp>  [ttl] [queue] [src_port] [rx/tx/both] --policer <policer>
+    config mirror_session add erspan <session-name> <src_ip> <dst_ip> <dscp> <ttl> [gre_type] [queue] [src_port] [rx/tx/both] --policer <policer>
 
     #Configure Port mirror span mirror session.
-    config mirror_session add span <session-name> <destination_ifName> <source_ifName> <rx/tx/both> [queue] --policer <policer>
+    config mirror_session add span <session-name> <destination_ifName> [source_ifName] [rx/tx/both] [queue] --policer <policer>
 ```
 
 KLISH CLI Support.
